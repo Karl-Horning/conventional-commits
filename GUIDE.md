@@ -1,5 +1,7 @@
 # Conventional commits
 
+Conventional commits is a specification for writing consistent, readable commit messages. Following it helps you and your team understand project history at a glance, communicate the impact of changes clearly, and automate changelogs and release notes.
+
 Based on [conventionalcommits.org](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## The basic format
@@ -19,7 +21,7 @@ Use these types to categorize your commits:
 | `feat` | Feature | Adding new functionality to the code. |
 | `fix` | Bug fix | Fixing a mistake or a crash. |
 | `docs` | Documentation | README, comments, or help files. |
-| `style` | Formatting | Code formatting only (no logic changes). |
+| `style` | Formatting | Code formatting only — linters, Prettier, whitespace. For UI changes, use `fix(ui)` or `refactor(ui)` instead. |
 | `refactor` | Cleanup | Improving code without changing what it does. |
 | `perf` | Performance | Making the code run faster or use less memory. |
 | `test` | Testing | Adding or fixing automated tests. |
