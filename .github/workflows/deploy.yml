@@ -15,10 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Upload site from src/
+      - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: src
+          path: .
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
