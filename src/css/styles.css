@@ -565,6 +565,37 @@ footer p {
 }
 
 /* ============================================================
+   Dark mode
+   ============================================================ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #1a1917;
+        --color-surface: #242220;
+        --color-surface-2: #2c2a27;
+        --color-border: #3d3a35;
+        --color-text: #f0ede8;
+        --color-text-secondary: #b8b3ad;
+        --color-link: #93c5fd;
+        --color-link-hover: #bfdbfe;
+        --color-focus: #60a5fa;
+        --color-do: #4ade80;
+        --color-do-bg: #052e16;
+        --color-do-border: #166534;
+        --color-dont: #fca5a5;
+        --color-dont-bg: #450a0a;
+        --color-dont-border: #991b1b;
+        --color-header-bg: #111110;
+        --color-header-text: #f0ede8;
+    }
+
+    .skip-link,
+    .font-btn.active {
+        color: #111110;
+    }
+}
+
+/* ============================================================
    Print
    ============================================================ */
 
