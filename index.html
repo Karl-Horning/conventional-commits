@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Conventional commits</title>
+        <meta
+            name="description"
+            content="A dyslexia-friendly reference guide for conventional commits."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+        />
+        <link rel="stylesheet" href="src/css/styles.css" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <header>
+            <div class="header-inner">
+                <p class="site-title">Conventional commits</p>
+                <div
+                    class="font-switcher"
+                    role="group"
+                    aria-label="Font preference"
+                >
+                    <span class="font-switcher-label" id="font-switcher-label"
+                        >Font:</span
+                    >
+                    <button
+                        class="font-btn active"
+                        data-font="inter"
+                        aria-pressed="true"
+                        aria-describedby="font-switcher-label"
+                    >
+                        Inter
+                    </button>
+                    <button
+                        class="font-btn"
+                        data-font="system"
+                        aria-pressed="false"
+                        aria-describedby="font-switcher-label"
+                    >
+                        System
+                    </button>
+                    <button
+                        class="font-btn"
+                        data-font="opendyslexic"
+                        aria-pressed="false"
+                        aria-describedby="font-switcher-label"
+                    >
+                        OpenDyslexic
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+            <section aria-labelledby="about-conventional-commits">
+                <h1 id="about-conventional-commits">
+                    About conventional commits
+                </h1>
+                <p>
+                    Conventional commits is a specification for writing
+                    consistent, readable commit messages. Following it helps you
+                    and your team understand project history at a glance,
+                    communicate the impact of changes clearly, and automate
+                    changelogs and release notes.
+                </p>
+            </section>
+
+            <section aria-labelledby="format-heading">
+                <h2 id="format-heading">The basic format</h2>
+                <p class="format-display">
+                    <code>type(scope): description</code>
+                </p>
+                <ul>
+                    <li>
+                        <strong>Type</strong>: What kind of change is this?
+                        (e.g., <code>feat</code>, <code>fix</code>).
+                    </li>
+                    <li>
+                        <strong>Scope</strong>: (Optional) What part of the
+                        project? (e.g., <code>api</code>, <code>ui</code>).
+                    </li>
+                    <li>
+                        <strong>Description</strong>: A short command like
+                        <code>add button</code> instead of
+                        <code>added button</code>.
+                    </li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="types-heading">
+                <h2 id="types-heading">Commit types</h2>
+                <p>Use these types to categorize your commits:</p>
+                <div
+                    class="table-wrapper"
+                    role="region"
+                    aria-label="Commit types"
+                    tabindex="0"
+                >
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Meaning</th>
+                                <th scope="col">When to use it</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>feat</code></td>
+                                <td>Feature</td>
+                                <td>Adding new functionality to the code.</td>
+                            </tr>
+                            <tr>
+                                <td><code>fix</code></td>
+                                <td>Bug fix</td>
+                                <td>Fixing a mistake or a crash.</td>
+                            </tr>
+                            <tr>
+                                <td><code>docs</code></td>
+                                <td>Documentation</td>
+                                <td>README, comments, or help files.</td>
+                            </tr>
+                            <tr>
+                                <td><code>style</code></td>
+                                <td>Formatting</td>
+                                <td>
+                                    Code formatting only — linters, Prettier,
+                                    whitespace. For UI changes, use
+                                    <code>fix(ui)</code> or
+                                    <code>refactor(ui)</code> instead.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>refactor</code></td>
+                                <td>Cleanup</td>
+                                <td>
+                                    Improving code without changing what it
+                                    does.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>perf</code></td>
+                                <td>Performance</td>
+                                <td>
+                                    Making the code run faster or use less
+                                    memory.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>test</code></td>
+                                <td>Testing</td>
+                                <td>Adding or fixing automated tests.</td>
+                            </tr>
+                            <tr>
+                                <td><code>build</code></td>
+                                <td>System</td>
+                                <td>
+                                    Changes to npm, dependencies, or scripts.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>ci</code></td>
+                                <td>Automation</td>
+                                <td>Changes to GitHub Actions or CI config.</td>
+                            </tr>
+                            <tr>
+                                <td><code>chore</code></td>
+                                <td>Maintenance</td>
+                                <td>
+                                    General tasks that don't change source code.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>revert</code></td>
+                                <td>Revert</td>
+                                <td>Undoing a previous commit.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section aria-labelledby="rules-heading">
+                <h2 id="rules-heading">Key rules</h2>
+                <p>These rules follow the Google and Angular style guides.</p>
+
+                <h3>1. Use the imperative mood</h3>
+                <p>
+                    Write your commit as if you are giving a command to the
+                    code.
+                </p>
+                <div class="example-pair">
+                    <div
+                        class="example do"
+                        role="region"
+                        aria-label="Do: use the imperative mood"
+                    >
+                        <span class="example-label" aria-hidden="true">Do</span>
+                        <code>feat: add video upload</code>
+                    </div>
+                    <div
+                        class="example dont"
+                        role="region"
+                        aria-label="Don't: use the imperative mood"
+                    >
+                        <span class="example-label" aria-hidden="true"
+                            >Don't</span
+                        >
+                        <code>feat: added video upload</code>
+                        <code>feat: adds video upload</code>
+                    </div>
+                </div>
+
+                <h3>2. Description format</h3>
+                <p>
+                    Keep descriptions lowercase and don't end them with a
+                    period.
+                </p>
+                <div class="example-pair">
+                    <div
+                        class="example do"
+                        role="region"
+                        aria-label="Do: description format"
+                    >
+                        <span class="example-label" aria-hidden="true">Do</span>
+                        <code>fix: resolve alignment on mobile screens</code>
+                    </div>
+                    <div
+                        class="example dont"
+                        role="region"
+                        aria-label="Don't: description format"
+                    >
+                        <span class="example-label" aria-hidden="true"
+                            >Don't</span
+                        >
+                        <code>fix: Resolved alignment on mobile screens.</code>
+                    </div>
+                </div>
+
+                <h3>3. Logical scopes</h3>
+                <p>
+                    Avoid using filenames in parentheses. Use the name of the
+                    feature or module.
+                </p>
+                <div class="example-pair">
+                    <div
+                        class="example do"
+                        role="region"
+                        aria-label="Do: logical scopes"
+                    >
+                        <span class="example-label" aria-hidden="true">Do</span>
+                        <code>feat(auth): add login</code>
+                    </div>
+                    <div
+                        class="example dont"
+                        role="region"
+                        aria-label="Don't: logical scopes"
+                    >
+                        <span class="example-label" aria-hidden="true"
+                            >Don't</span
+                        >
+                        <code>feat(login.ts): add login</code>
+                    </div>
+                </div>
+
+                <h3>4. Breaking changes</h3>
+                <p>
+                    If your change will break things for other people, add
+                    <code aria-label="exclamation mark">!</code> after the type
+                    or scope.
+                </p>
+                <div class="example-pair">
+                    <div
+                        class="example do"
+                        role="region"
+                        aria-label="Do: breaking changes"
+                    >
+                        <span class="example-label" aria-hidden="true">Do</span>
+                        <code>feat!: change database schema</code>
+                        <code>feat(auth)!: remove password login</code>
+                    </div>
+                </div>
+
+                <h3>5. Body and footers</h3>
+                <p>
+                    For more context, add a body (separated by a blank line) and
+                    optional footers.
+                </p>
+                <pre><code>feat(editor): add autosave for scripts
+
+Autosave triggers every 30 seconds when the editor is active.
+
+BREAKING CHANGE: removes the manual save shortcut
+Fixes #42</code></pre>
+            </section>
+
+            <section aria-labelledby="examples-heading">
+                <h2 id="examples-heading">Quick examples to copy</h2>
+                <ul class="copy-list" aria-label="Commit examples">
+                    <li class="copy-item">
+                        <code>feat(editor): add autosave for scripts</code>
+                        <button
+                            class="copy-btn"
+                            aria-label="Copy feat(editor): add autosave for scripts"
+                        >
+                            Copy
+                        </button>
+                    </li>
+                    <li class="copy-item">
+                        <code
+                            >fix(ui): resolve alignment on mobile screens</code
+                        >
+                        <button
+                            class="copy-btn"
+                            aria-label="Copy fix(ui): resolve alignment on mobile screens"
+                        >
+                            Copy
+                        </button>
+                    </li>
+                    <li class="copy-item">
+                        <code>docs: update installation steps in readme</code>
+                        <button
+                            class="copy-btn"
+                            aria-label="Copy docs: update installation steps in readme"
+                        >
+                            Copy
+                        </button>
+                    </li>
+                    <li class="copy-item">
+                        <code>chore(deps): update types for typescript</code>
+                        <button
+                            class="copy-btn"
+                            aria-label="Copy chore(deps): update types for typescript"
+                        >
+                            Copy
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                © 2026
+                <a
+                    href="https://github.com/Karl-Horning/"
+                    rel="noopener noreferrer"
+                    >Karl Horning</a
+                >. Available under the
+                <a href="LICENSE" rel="noopener noreferrer">MIT licence</a>.
+                Based on
+                <a
+                    href="https://www.conventionalcommits.org/en/v1.0.0/"
+                    rel="noopener noreferrer"
+                    >conventionalcommits.org</a
+                >.
+            </p>
+            <p>
+                <a href="GUIDE.md" download>Download the markdown guide</a>
+            </p>
+        </footer>
+
+        <script src="src/js/main.js"></script>
+    </body>
+</html>
