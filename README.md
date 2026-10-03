@@ -16,6 +16,8 @@ Tested with WAVE and VoiceOver on macOS. Meets WCAG 2.1 AAA contrast. VoiceOver 
 
 A plain markdown version is available in [GUIDE.md](./GUIDE.md) if you prefer to keep a local copy. Note that the site and the guide are maintained separately. If you spot them out of sync, please [open an issue](https://github.com/Karl-Horning/conventional-commits/issues).
 
+If you keep a local copy, check the [changelog](./CHANGELOG.md) to see what's changed since you downloaded it.
+
 ## Contributing
 
 Spotted a mistake or have a suggestion? [Open an issue](https://github.com/Karl-Horning/conventional-commits/issues) or submit a pull request. Both are welcome.
