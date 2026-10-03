@@ -12,6 +12,16 @@ Add new entries here as they're merged, then rename this section when the releas
 
 - This changelog
 
+### Fixed
+
+- Copy buttons staying on "Copied!" after a quick second click
+- Copy buttons giving no feedback when copying fails
+- Screen readers not announcing when an example is copied
+- Screen readers reading each "Don't" example as an instruction to avoid the rule it shows
+- Screen readers treating each do and don't example as a separate page region
+- Screen readers not saying "exclamation mark" for the `!` in the breaking changes rule
+- Font buttons repeating the "Font:" label after each button name
+
 ## [1.0.0] - 2026-04-15
 
 First tagged release. Earlier work wasn't tagged, so this release gathers everything built so far.

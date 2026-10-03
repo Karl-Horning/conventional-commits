@@ -89,7 +89,7 @@
                 <div
                     class="font-switcher"
                     role="group"
-                    aria-label="Font preference"
+                    aria-labelledby="font-switcher-label"
                 >
                     <span class="font-switcher-label" id="font-switcher-label"
                         >Font:</span
@@ -98,7 +98,6 @@
                         class="font-btn active"
                         data-font="inter"
                         aria-pressed="true"
-                        aria-describedby="font-switcher-label"
                     >
                         Inter
                     </button>
@@ -106,7 +105,6 @@
                         class="font-btn"
                         data-font="system"
                         aria-pressed="false"
-                        aria-describedby="font-switcher-label"
                     >
                         System
                     </button>
@@ -114,7 +112,6 @@
                         class="font-btn"
                         data-font="opendyslexic"
                         aria-pressed="false"
-                        aria-describedby="font-switcher-label"
                     >
                         OpenDyslexic
                     </button>
@@ -261,22 +258,12 @@
                     code.
                 </p>
                 <div class="example-pair">
-                    <div
-                        class="example do"
-                        role="region"
-                        aria-label="Do: use the imperative mood"
-                    >
-                        <span class="example-label" aria-hidden="true">Do</span>
+                    <div class="example do">
+                        <span class="example-label">Do</span>
                         <code>feat: add video upload</code>
                     </div>
-                    <div
-                        class="example dont"
-                        role="region"
-                        aria-label="Don't: use the imperative mood"
-                    >
-                        <span class="example-label" aria-hidden="true"
-                            >Don't</span
-                        >
+                    <div class="example dont">
+                        <span class="example-label">Don't</span>
                         <code>feat: added video upload</code>
                         <code>feat: adds video upload</code>
                     </div>
@@ -288,22 +275,12 @@
                     period.
                 </p>
                 <div class="example-pair">
-                    <div
-                        class="example do"
-                        role="region"
-                        aria-label="Do: description format"
-                    >
-                        <span class="example-label" aria-hidden="true">Do</span>
+                    <div class="example do">
+                        <span class="example-label">Do</span>
                         <code>fix: resolve alignment on mobile screens</code>
                     </div>
-                    <div
-                        class="example dont"
-                        role="region"
-                        aria-label="Don't: description format"
-                    >
-                        <span class="example-label" aria-hidden="true"
-                            >Don't</span
-                        >
+                    <div class="example dont">
+                        <span class="example-label">Don't</span>
                         <code>fix: Resolved alignment on mobile screens.</code>
                     </div>
                 </div>
@@ -314,22 +291,12 @@
                     feature or module.
                 </p>
                 <div class="example-pair">
-                    <div
-                        class="example do"
-                        role="region"
-                        aria-label="Do: logical scopes"
-                    >
-                        <span class="example-label" aria-hidden="true">Do</span>
+                    <div class="example do">
+                        <span class="example-label">Do</span>
                         <code>feat(auth): add login</code>
                     </div>
-                    <div
-                        class="example dont"
-                        role="region"
-                        aria-label="Don't: logical scopes"
-                    >
-                        <span class="example-label" aria-hidden="true"
-                            >Don't</span
-                        >
+                    <div class="example dont">
+                        <span class="example-label">Don't</span>
                         <code>feat(login.ts): add login</code>
                     </div>
                 </div>
@@ -337,16 +304,13 @@
                 <h3>4. Breaking changes</h3>
                 <p>
                     If your change will break things for other people, add
-                    <code aria-label="exclamation mark">!</code> after the type
-                    or scope.
+                    <code>!</code
+                    ><span class="visually-hidden"> (exclamation mark)</span>
+                    after the type or scope.
                 </p>
                 <div class="example-pair">
-                    <div
-                        class="example do"
-                        role="region"
-                        aria-label="Do: breaking changes"
-                    >
-                        <span class="example-label" aria-hidden="true">Do</span>
+                    <div class="example do">
+                        <span class="example-label">Do</span>
                         <code>feat!: change database schema</code>
                         <code>feat(auth)!: remove password login</code>
                     </div>
@@ -407,6 +371,12 @@ Fixes #42</code></pre>
                         </button>
                     </li>
                 </ul>
+                <p
+                    class="visually-hidden"
+                    id="copy-status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
             </section>
         </main>
 
