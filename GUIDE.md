@@ -8,8 +8,8 @@ Based on [conventionalcommits.org](https://www.conventionalcommits.org/en/v1.0.0
 
 `type(scope): description`
 
-- **Type**: What kind of change is this? (e.g., `feat`, `fix`).
-- **Scope**: (Optional) What part of the project? (e.g., `api`, `ui`).
+- **Type**: What kind of change is this? (for example, `feat`, `fix`).
+- **Scope**: (Optional) What part of the project? (for example, `api`, `ui`).
 - **Description**: A short command like "add button" instead of "added button".
 
 ## Commit types
