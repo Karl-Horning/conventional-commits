@@ -39,6 +39,8 @@
    ============================================================ */
 
 :root {
+    color-scheme: light dark;
+
     /* Colour */
     --color-bg: #f7f5f0;
     --color-surface: #edeae3;
@@ -46,17 +48,26 @@
     --color-border: #ccc8bf;
     --color-text: #1c1b1a;
     --color-text-secondary: #57534e;
-    --color-link: #1d4ed8;
-    --color-link-hover: #1e40af;
+    --color-link: #1e40af;
+    --color-link-hover: #1e3a8a;
     --color-focus: #2563eb;
-    --color-do: #15803d;
+    --color-do: #14532d;
     --color-do-bg: #f0fdf4;
     --color-do-border: #86efac;
-    --color-dont: #b91c1c;
+    --color-dont: #991b1b;
     --color-dont-bg: #fff1f2;
     --color-dont-border: #fca5a5;
     --color-header-bg: #1c1b1a;
     --color-header-text: #f7f5f0;
+    --color-header-text-muted: #b8b3ad;
+    --color-header-border: #333333;
+    --color-header-btn-text: #d6d3d1;
+    --color-header-btn-border: #78716c;
+    --color-header-btn-hover-bg: #292524;
+    --color-header-btn-hover-border: #a8a29e;
+    --color-header-btn-hover-text: #f5f5f4;
+    --color-header-accent: #60a5fa;
+    --color-header-on-accent: #111110;
 
     /* Typography */
     --font-inter: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -123,6 +134,7 @@ html[data-font="opendyslexic"] {
 html {
     font-size: 100%;
     scroll-behavior: smooth;
+    scroll-padding-top: var(--space-16);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -150,8 +162,8 @@ body {
     top: var(--space-4);
     left: var(--space-4);
     padding: var(--space-2) var(--space-4);
-    background-color: var(--color-focus);
-    color: #fff;
+    background-color: var(--color-header-accent);
+    color: var(--color-header-on-accent);
     font-weight: 600;
     text-decoration: none;
     border-radius: 4px;
@@ -289,7 +301,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--color-header-border);
 }
 
 .header-inner {
@@ -324,15 +336,15 @@ header {
 
 .font-switcher-label {
     font-size: var(--text-sm);
-    color: #a8a29e;
+    color: var(--color-header-text-muted);
 }
 
 .font-btn {
     font-family: var(--font-body);
     font-size: var(--text-sm);
     background-color: transparent;
-    color: #d6d3d1;
-    border: 1px solid #57534e;
+    color: var(--color-header-btn-text);
+    border: 1px solid var(--color-header-btn-border);
     border-radius: 4px;
     padding: var(--space-1) var(--space-3);
     cursor: pointer;
@@ -349,19 +361,19 @@ header {
 }
 
 .font-btn:hover {
-    background-color: #292524;
-    border-color: #a8a29e;
-    color: #f5f5f4;
+    background-color: var(--color-header-btn-hover-bg);
+    border-color: var(--color-header-btn-hover-border);
+    color: var(--color-header-btn-hover-text);
 }
 
 .font-btn.active {
-    background-color: var(--color-focus);
-    border-color: var(--color-focus);
-    color: #fff;
+    background-color: var(--color-header-accent);
+    border-color: var(--color-header-accent);
+    color: var(--color-header-on-accent);
 }
 
 .font-btn:focus-visible {
-    outline: 3px solid var(--color-focus);
+    outline: 3px solid var(--color-header-accent);
     outline-offset: 3px;
 }
 
@@ -603,11 +615,6 @@ footer p {
         --color-dont-border: #991b1b;
         --color-header-bg: #111110;
         --color-header-text: #f0ede8;
-    }
-
-    .skip-link,
-    .font-btn.active {
-        color: #111110;
     }
 }
 
