@@ -8,6 +8,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 Add new entries here as they're merged, then rename this section when the release is ready.
 
+## [1.0.3] - 2026-10-04
+
+### Fixed
+
+- Inter showing briefly on page load before switching to the saved font
+- A fallback font showing briefly while OpenDyslexic loads
+- An invalid saved font leaving no font button selected
+
 ## [1.0.2] - 2026-10-04
 
 ### Changed

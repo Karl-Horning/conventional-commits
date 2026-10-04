@@ -5,6 +5,13 @@ const STORAGE_KEY_FONT = "cc-font-preference";
 const DEFAULT_FONT = "inter";
 
 /**
+ * Valid font identifiers. The inline script in the head of index.html checks against the same list.
+ *
+ * @type {string[]}
+ */
+const FONTS = ["inter", "system", "opendyslexic"];
+
+/**
  * Applies the chosen font to the document and updates button state.
  *
  * @param {string} font - The font identifier ('inter', 'system', or 'opendyslexic').
@@ -28,18 +35,19 @@ const saveFont = (font) => {
     try {
         localStorage.setItem(STORAGE_KEY_FONT, font);
     } catch {
-        // localStorage may be unavailable in private browsing; fail silently.
+        // Without localStorage, the choice lasts until the page reloads.
     }
 };
 
 /**
- * Loads the saved font from localStorage, falling back to the default.
+ * Loads the saved font from localStorage. Returns the default font if nothing valid is saved.
  *
- * @returns {string} The saved font identifier.
+ * @returns {string} The font identifier to apply.
  */
 const loadFont = () => {
     try {
-        return localStorage.getItem(STORAGE_KEY_FONT) ?? DEFAULT_FONT;
+        const font = localStorage.getItem(STORAGE_KEY_FONT);
+        return FONTS.includes(font) ? font : DEFAULT_FONT;
     } catch {
         return DEFAULT_FONT;
     }

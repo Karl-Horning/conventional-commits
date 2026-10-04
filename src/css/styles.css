@@ -7,7 +7,7 @@
     src: url("../fonts/OpenDyslexic-Regular.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
     src: url("../fonts/OpenDyslexic-Italic.otf") format("opentype");
     font-weight: 400;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -23,7 +23,7 @@
     src: url("../fonts/OpenDyslexic-Bold.otf") format("opentype");
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -31,7 +31,7 @@
     src: url("../fonts/OpenDyslexic-BoldItalic.otf") format("opentype");
     font-weight: 600;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 
 /* ============================================================
