@@ -8,6 +8,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 Add new entries here as they're merged, then rename this section when the release is ready.
 
+## [1.0.2] - 2026-10-04
+
 ### Changed
 
 - Active font button and skip link use a light blue fill with dark text in both light and dark mode
