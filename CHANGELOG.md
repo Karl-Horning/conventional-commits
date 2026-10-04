@@ -8,7 +8,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 Add new entries here as they're merged, then rename this section when the release is ready.
 
-## [1.0.1] - 2026-04-15
+### Changed
+
+- Active font button and skip link use a light blue fill with dark text in both light and dark mode
+- Header colours set through colour tokens
+
+### Fixed
+
+- Light mode contrast below WCAG AAA for the do and don't labels, links, the active font button, the skip link, and the "Font:" label
+- Font button borders below the 3:1 contrast needed against the header
+- Scrollbars staying light in dark mode
+- Sticky header covering the top of the main content after using the skip link
+
+## [1.0.1] - 2026-10-03
 
 ### Added
 
@@ -38,5 +50,6 @@ First tagged release. Earlier work wasn't tagged, so this release gathers everyt
 - Open Graph, Twitter card, and structured data metadata, plus Google site verification
 - GitHub Actions workflow deploying to GitHub Pages on every push to `main`
 
-[Unreleased]: https://github.com/Karl-Horning/conventional-commits/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Karl-Horning/conventional-commits/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.0.1
 [1.0.0]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.0.0
