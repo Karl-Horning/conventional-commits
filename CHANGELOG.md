@@ -8,6 +8,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 Add new entries here as they're merged, then rename this section when the release is ready.
 
+## [1.1.0] - 2026-10-04
+
+### Added
+
+- "How commits map to versions" section, linking each kind of commit to a Semantic Versioning release
+- Note on where the commit types beyond `feat` and `fix` come from
+
+### Changed
+
+- UK English spelling throughout, with the page language set to `en-GB`
+
+### Fixed
+
+- The dependency example using `chore(deps)` when the commit types table lists dependencies under `build`
+
 ## [1.0.3] - 2026-10-04
 
 ### Fixed
@@ -60,6 +75,9 @@ First tagged release. Earlier work wasn't tagged, so this release gathers everyt
 - Open Graph, Twitter card, and structured data metadata, plus Google site verification
 - GitHub Actions workflow deploying to GitHub Pages on every push to `main`
 
-[Unreleased]: https://github.com/Karl-Horning/conventional-commits/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/Karl-Horning/conventional-commits/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.1.0
+[1.0.3]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.0.3
+[1.0.2]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.0.2
 [1.0.1]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.0.1
 [1.0.0]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.0.0

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,7 +60,7 @@
                 "@context": "https://schema.org",
                 "@type": "TechArticle",
                 "headline": "Conventional Commits Cheat Sheet: Dyslexia-Friendly Guide",
-                "description": "A technical reference guide for the Conventional Commits specification, optimized for accessibility and dyslexia.",
+                "description": "A technical reference guide for the Conventional Commits specification, optimised for accessibility and dyslexia.",
                 "url": "https://www.karlhorning.dev/conventional-commits/",
                 "image": "https://www.karlhorning.dev/conventional-commits/src/img/preview-image.webp",
                 "author": {
@@ -164,12 +164,13 @@
                 </p>
                 <ul>
                     <li>
-                        <strong>Type</strong>: What kind of change is this?
-                        (for example, <code>feat</code>, <code>fix</code>).
+                        <strong>Type</strong>: What kind of change is this? (for
+                        example, <code>feat</code>, <code>fix</code>).
                     </li>
                     <li>
                         <strong>Scope</strong>: (Optional) What part of the
-                        project? (for example, <code>api</code>, <code>ui</code>).
+                        project? (for example, <code>api</code>,
+                        <code>ui</code>).
                     </li>
                     <li>
                         <strong>Description</strong>: A short command like
@@ -181,7 +182,7 @@
 
             <section aria-labelledby="types-heading">
                 <h2 id="types-heading">Commit types</h2>
-                <p>Use these types to categorize your commits:</p>
+                <p>Use these types to categorise your commits:</p>
                 <div
                     class="table-wrapper"
                     role="region"
@@ -270,6 +271,14 @@
                         </tbody>
                     </table>
                 </div>
+                <p>
+                    The specification defines <code>feat</code> and
+                    <code>fix</code>. The other types come from
+                    <a
+                        href="https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional"
+                        >@commitlint/config-conventional</a
+                    >, which is based on the Angular convention.
+                </p>
             </section>
 
             <section aria-labelledby="rules-heading">
@@ -353,6 +362,65 @@ BREAKING CHANGE: removes the manual save shortcut
 Fixes #42</code></pre>
             </section>
 
+            <section aria-labelledby="versions-heading">
+                <h2 id="versions-heading">How commits map to versions</h2>
+                <p>
+                    Each commit tells you which part of the version number to
+                    increase. The
+                    <a
+                        href="https://www.conventionalcommits.org/en/v1.0.0/#how-does-this-relate-to-semver"
+                        >Conventional Commits FAQ</a
+                    >
+                    links each kind of commit to a
+                    <a href="https://semver.org/">Semantic Versioning</a>
+                    release:
+                </p>
+                <div
+                    class="table-wrapper"
+                    role="region"
+                    aria-label="Versions by commit type"
+                    tabindex="0"
+                >
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Commit</th>
+                                <th scope="col">Release</th>
+                                <th scope="col">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>fix</code></td>
+                                <td>Patch</td>
+                                <td>1.0.0 to 1.0.1</td>
+                            </tr>
+                            <tr>
+                                <td><code>feat</code></td>
+                                <td>Minor</td>
+                                <td>1.0.0 to 1.1.0</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Any type with <code>!</code
+                                    ><span class="visually-hidden">
+                                        (exclamation mark)</span
+                                    >
+                                    or a
+                                    <code>BREAKING CHANGE</code> footer
+                                </td>
+                                <td>Major</td>
+                                <td>1.0.0 to 2.0.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>
+                    Other types leave the version number unchanged unless they
+                    include a breaking change.
+                </p>
+            </section>
+
             <section aria-labelledby="examples-heading">
                 <h2 id="examples-heading">Quick examples to copy</h2>
                 <ul class="copy-list" aria-label="Commit examples">
@@ -386,10 +454,10 @@ Fixes #42</code></pre>
                         </button>
                     </li>
                     <li class="copy-item">
-                        <code>chore(deps): update types for typescript</code>
+                        <code>build(deps): update types for typescript</code>
                         <button
                             class="copy-btn"
-                            aria-label="Copy chore(deps): update types for typescript"
+                            aria-label="Copy build(deps): update types for typescript"
                         >
                             Copy
                         </button>

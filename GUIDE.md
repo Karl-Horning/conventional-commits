@@ -14,7 +14,7 @@ Based on [conventionalcommits.org](https://www.conventionalcommits.org/en/v1.0.0
 
 ## Commit types
 
-Use these types to categorize your commits:
+Use these types to categorise your commits:
 
 | Type | Meaning | When to use it |
 | :--- | :--- | :--- |
@@ -29,6 +29,8 @@ Use these types to categorize your commits:
 | `ci` | Automation | Changes to GitHub Actions or CI config. |
 | `chore` | Maintenance | General tasks that don't change source code. |
 | `revert` | Revert | Undoing a previous commit. |
+
+The specification defines `feat` and `fix`. The other types come from [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional), which is based on the Angular convention.
 
 ## Key rules (Google & Angular style)
 
@@ -73,9 +75,21 @@ BREAKING CHANGE: removes the manual save shortcut
 Fixes #42
 ```
 
+## How commits map to versions
+
+Each commit tells you which part of the version number to increase. The [Conventional Commits FAQ](https://www.conventionalcommits.org/en/v1.0.0/#how-does-this-relate-to-semver) links each kind of commit to a [Semantic Versioning](https://semver.org/) release:
+
+| Commit | Release | Example |
+| :--- | :--- | :--- |
+| `fix` | Patch | 1.0.0 to 1.0.1 |
+| `feat` | Minor | 1.0.0 to 1.1.0 |
+| Any type with `!` or a `BREAKING CHANGE` footer | Major | 1.0.0 to 2.0.0 |
+
+Other types leave the version number unchanged unless they include a breaking change.
+
 ## Quick examples to copy
 
 - `feat(editor): add autosave for scripts`
 - `fix(ui): resolve alignment on mobile screens`
 - `docs: update installation steps in readme`
-- `chore(deps): update types for typescript`
+- `build(deps): update types for typescript`
