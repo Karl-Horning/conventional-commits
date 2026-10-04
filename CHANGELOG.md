@@ -8,6 +8,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 Add new entries here as they're merged, then rename this section when the release is ready.
 
+## [1.1.1] - 2026-10-04
+
+### Changed
+
+- The site serves its own copy of Inter, so the page makes no requests to Google Fonts
+- OpenDyslexic uses the WOFF2 format, which cuts its download size by about 40%
+- Link preview image moved to `/conventional-commits/preview-image.webp`
+
 ## [1.1.0] - 2026-10-04
 
 ### Added
@@ -75,7 +83,8 @@ First tagged release. Earlier work wasn't tagged, so this release gathers everyt
 - Open Graph, Twitter card, and structured data metadata, plus Google site verification
 - GitHub Actions workflow deploying to GitHub Pages on every push to `main`
 
-[Unreleased]: https://github.com/Karl-Horning/conventional-commits/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/Karl-Horning/conventional-commits/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.1.1
 [1.1.0]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.1.0
 [1.0.3]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.0.3
 [1.0.2]: https://github.com/Karl-Horning/conventional-commits/releases/tag/v1.0.2
