@@ -79,6 +79,30 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
         />
         <link rel="stylesheet" href="src/css/styles.css" />
+        <script>
+            // Apply the saved font before the first paint. The key and font list match src/js/main.js.
+            try {
+                const font = localStorage.getItem("cc-font-preference");
+                if (["inter", "system", "opendyslexic"].includes(font)) {
+                    document.documentElement.dataset.font = font;
+                }
+
+                // Start downloading OpenDyslexic now, so the font-display: block wait in styles.css stays short.
+                if (font === "opendyslexic") {
+                    for (const weight of ["Regular", "Bold"]) {
+                        const link = document.createElement("link");
+                        link.rel = "preload";
+                        link.as = "font";
+                        link.type = "font/otf";
+                        link.crossOrigin = "";
+                        link.href = `src/fonts/OpenDyslexic-${weight}.otf`;
+                        document.head.append(link);
+                    }
+                }
+            } catch {
+                // Without localStorage, the page uses the default font.
+            }
+        </script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
@@ -141,11 +165,11 @@
                 <ul>
                     <li>
                         <strong>Type</strong>: What kind of change is this?
-                        (e.g., <code>feat</code>, <code>fix</code>).
+                        (for example, <code>feat</code>, <code>fix</code>).
                     </li>
                     <li>
                         <strong>Scope</strong>: (Optional) What part of the
-                        project? (e.g., <code>api</code>, <code>ui</code>).
+                        project? (for example, <code>api</code>, <code>ui</code>).
                     </li>
                     <li>
                         <strong>Description</strong>: A short command like
