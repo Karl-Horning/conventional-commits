@@ -28,7 +28,7 @@
         />
         <meta
             property="og:image"
-            content="https://www.karlhorning.dev/conventional-commits/src/img/preview-image.webp"
+            content="https://www.karlhorning.dev/conventional-commits/preview-image.webp"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -43,7 +43,7 @@
         />
         <meta
             name="twitter:image"
-            content="https://www.karlhorning.dev/conventional-commits/src/img/preview-image.webp"
+            content="https://www.karlhorning.dev/conventional-commits/preview-image.webp"
         />
 
         <meta
@@ -62,7 +62,7 @@
                 "headline": "Conventional Commits Cheat Sheet: Dyslexia-Friendly Guide",
                 "description": "A technical reference guide for the Conventional Commits specification, optimised for accessibility and dyslexia.",
                 "url": "https://www.karlhorning.dev/conventional-commits/",
-                "image": "https://www.karlhorning.dev/conventional-commits/src/img/preview-image.webp",
+                "image": "https://www.karlhorning.dev/conventional-commits/preview-image.webp",
                 "author": {
                     "@type": "Person",
                     "name": "Karl Horning",
@@ -72,12 +72,6 @@
                 "inLanguage": "en-GB"
             }
         </script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-        />
         <link rel="stylesheet" href="src/css/styles.css" />
         <script>
             // Apply the saved font before the first paint. The key and font list match src/js/main.js.
@@ -93,9 +87,9 @@
                         const link = document.createElement("link");
                         link.rel = "preload";
                         link.as = "font";
-                        link.type = "font/otf";
+                        link.type = "font/woff2";
                         link.crossOrigin = "";
-                        link.href = `src/fonts/OpenDyslexic-${weight}.otf`;
+                        link.href = `fonts/OpenDyslexic-${weight}.woff2`;
                         document.head.append(link);
                     }
                 }
@@ -493,6 +487,6 @@ Fixes #42</code></pre>
             </p>
         </footer>
 
-        <script src="src/js/main.js"></script>
+        <script type="module" src="src/js/main.js"></script>
     </body>
 </html>

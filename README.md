@@ -4,13 +4,24 @@ A scannable reference guide for conventional commits. The [official spec](https:
 
 ## Site
 
-![Preview of the conventional commits landing page](./src/img/preview-image.webp)
+![Preview of the conventional commits landing page](./public/preview-image.webp)
 
 **[karlhorning.dev/conventional-commits](https://www.karlhorning.dev/conventional-commits/)**
 
-The site includes font options (Inter, system, and OpenDyslexic) and a working dark mode. Built with HTML, CSS, and JavaScript. No framework, no build step.
+The site includes font options (Inter, system, and OpenDyslexic) and a working dark mode. Built with HTML, CSS, and JavaScript, with no framework. Vite bundles the site before it's deployed.
 
 Tested with WAVE and VoiceOver on macOS. Meets WCAG 2.1 AAA contrast. VoiceOver has a lower market share than NVDA or JAWS, so if you find issues with another screen reader, please [open an issue](https://github.com/Karl-Horning/conventional-commits/issues).
+
+## Run it locally
+
+You need Node.js. The version is in [`.nvmrc`](./.nvmrc).
+
+```sh
+npm install
+npm run dev
+```
+
+`npm run build` writes the site to `dist`.
 
 ## Markdown guide
 
