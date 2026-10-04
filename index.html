@@ -72,12 +72,6 @@
                 "inLanguage": "en-GB"
             }
         </script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-        />
         <link rel="stylesheet" href="src/css/styles.css" />
         <script>
             // Apply the saved font before the first paint. The key and font list match src/js/main.js.
@@ -93,9 +87,9 @@
                         const link = document.createElement("link");
                         link.rel = "preload";
                         link.as = "font";
-                        link.type = "font/otf";
+                        link.type = "font/woff2";
                         link.crossOrigin = "";
-                        link.href = `src/fonts/OpenDyslexic-${weight}.otf`;
+                        link.href = `fonts/OpenDyslexic-${weight}.woff2`;
                         document.head.append(link);
                     }
                 }
